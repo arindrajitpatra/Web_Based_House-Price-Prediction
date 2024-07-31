@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the House Price Prediction API!</h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" name="bedrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="sqft_living">Sqft Living:</label>
+                <input type="number" id="sqft_living" name="sqft_living" required>
+            </div>
+            <div class="form-group">
+                <label for="sqft_lot">Sqft Lot:</label>
+                <input type="number" id="sqft_lot" name="sqft_lot" required>
+            </div>
+            <div class="form-group">
+                <label for="floors">Floors:</label>
+                <input type="number" id="floors" name="floors" required>
+            </div>
+            <div class="form-group">
+                <label for="waterfront">Waterfront (0 or 1):</label>
+                <input type="number" id="waterfront" name="waterfront" required>
+            </div>
+            <div class="form-group">
+                <label for="view">View (0 to 4):</label>
+                <input type="number" id="view" name="view" required>
+            </div>
+            <div class="form-group">
+                <label for="sqft_above">Sqft Above:</label>
+                <input type="number" id="sqft_above" name="sqft_above" required>
+            </div>
+            <div class="form-group">
+                <label for="sqft_basement">Sqft Basement:</label>
+                <input type="number" id="sqft_basement" name="sqft_basement" required>
+            </div>
+            <button type="button" id="predict-button">Predict</button>
+        </form>
+        <div id="result">
+            <h2>Prediction Result:</h2>
+            <p id="prediction-output">Please enter the details and click "Predict".</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
